@@ -24,15 +24,15 @@
         - 복사해서 대상 배열에 붙여 넣기를 시작할 첫 번째 위치
       - length
         - src에서 dest로 자료를 복사할 수 있습니다.
-    -2021-09-15
-    -ArrayList 클래스의 주요 메서드
-      -boolean add(E e)
-        -요소 하나를 배열에 추가합니다. E는 요소의 자로형을 의미합니다.
-      -int size()
-        -배열에 추가된 요소 전체 개수를 반환합니다.
-      -E get(int index)
-        -배열의 index 위치에 있는 요소 값을 제거하고 그 값을 반환합니다.
-      -E remove(int index)
-        -배열의 index 위치에 있는 요소 값을 제거하고 그 값을 반환합니다.
-      -boolean isEmpty()
-        -배열이 비어 있는지 확인합니다.
+    - 2021-09-15
+    - ArrayList 클래스의 주요 메서드
+      - boolean add(E e)
+        - 요소 하나를 배열에 추가합니다. E는 요소의 자로형을 의미합니다.
+      - int size()
+        - 배열에 추가된 요소 전체 개수를 반환합니다.
+      - E get(int index)
+        - 배열의 index 위치에 있는 요소 값을 제거하고 그 값을 반환합니다.
+      - E remove(int index)
+        - 배열의 index 위치에 있는 요소 값을 제거하고 그 값을 반환합니다.
+      - boolean isEmpty()
+        - 배열이 비어 있는지 확인합니다.
