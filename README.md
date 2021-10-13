@@ -36,3 +36,13 @@
         - 배열의 index 위치에 있는 요소 값을 제거하고 그 값을 반환합니다.
       - boolean isEmpty()
         - 배열이 비어 있는지 확인합니다.
+  - 2021-10-13
+  - 애노테이션
+      - @Override
+        - 재정의된 메서드라는 정보 제공
+      - @Fuctionallnterface
+        - 함수형 인처페이스라는 정보 제공
+      - @Deprecated
+        - 이후 버전에서 사용되지 않을 수 있는 변수, 메서드에 사용됨
+      - @SuppressWarnings
+        - 특정 경고가 나타나지 않도록 함
