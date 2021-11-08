@@ -91,3 +91,23 @@
       - 서버와 대응돼는 프로그램에서 어떤 메서드를 제공하는지 미리 알려주는 명세 또는 약속의 역할을 한다. 
       - 인터페이스를 구현한 클래스가 어떤 기능의 메서드를 제공하는지 명시하는 것이다.
       - 클라이언트 프로그램은 인터페이스에서 약속한 명세대로 구현한 클래스를 생성해서 사용하면 됌.
+  - 상속 
+      - extends 
+        - 부모에서 선언/정의를 모두하며 자식은 메소드/변수를 그대로 사용할 수 있음
+        - extends가 상속의 대표적인 형태                                              
+        - 부모의 메소드를 그래도 사용할 수 있으며 오버라이딩 할 필요 없이 부모에 구현 되있는 것을 직접 사용 가능
+      - implements 
+        - 부모 객체는 선언만 하며 정의(내용)은 자식에서 오버라이딩(재정의)해서 사용해야함
+      - abstract
+        - extends와 interface 혼합. extends하되 몇 개는 추상 메서드로 구현되어 있음
+      - 정리
+        - extends는 일반 클래스와 abstract 클래스 상속에 사용되고, implement는 interface 상속에 사용
+        - class가 class를 상속받을 땐 extends를 사용하고, interface가 interface를 상속 받을 땐 extends를 사용
+        - class가 interface를 사용할 땐 implements를 써야함
+        - interface가 class를 사용할 땐 implements를 쓸수 없음
+        - extends는 클래스 한 개만 상속 받을 수 있음
+        - extends 자신 클래스는 부모 클래스의 기능을 사용
+        - implements는 여러개 사용 가능
+        - implements는 설계 목적으로 구현 가능
+        - implements한 클래스는 implements의 내용을 다 사용해야 함
+
