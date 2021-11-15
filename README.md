@@ -122,3 +122,16 @@
      - 조상 클래스로부터 상속받은 메서드의 내용을 변경하는 것
   - 오버로딩
      - 기존에 없던 새로운 메서드를 정의하는 것
+  - 메서드/생성자
+     - Vector()
+        - 10개의 객체를 저장할 수 있는 Vector인스턴스를 생성한다. 10개 이상의 인스턴스가 저장되면, 자동적으로 크기가 증가
+     - boolean add(Object o)
+        - Vector에 객체를 추가한다. 추가에 성공하면 결과값으로 true, 실패하면 false를 반환
+     - boolean remove(Object o)
+        - Vector에 저장되어 있는 객체를 제거한다. 제거에 성공하면 true, 실패하면 false를 반환
+     - boolean isEmpty()
+        - Vector가 비어있는지 검사한다. 비어있으면 true, 비어있지 않으면 false를 반환
+     - Object get(int index)
+        - 지정된 위치(index)의 객체를 반환한다. 반환타임이 Object타임이므로 적절한 타임으로의 형변환이 필요
+     - int size()
+        - Vector에 저장된 객체를 개수를 반환
