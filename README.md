@@ -103,6 +103,10 @@
         - 부모 객체는 선언만 하며 정의(내용)은 자식에서 오버라이딩(재정의)해서 사용해야함
       - abstract
         - extends와 interface 혼합. extends하되 몇 개는 추상 메서드로 구현되어 있음
+      - 클래스일때
+        - 클래스 내에 추상메서드가 선언되어 있음을 의미
+      - 메서드일때
+        - 선언부만 작성하고 구현부는 작성하지 않는 추상메서드임을 알림
       - 정리
         - extends는 일반 클래스와 abstract 클래스 상속에 사용되고, implement는 interface 상속에 사용
         - class가 class를 상속받을 땐 extends를 사용하고, interface가 interface를 상속 받을 땐 extends를 사용
