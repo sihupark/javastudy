@@ -215,6 +215,7 @@
      - 추상클래스를 만들려면 abstract를 클래스 앞에 붙인다.
 #raspberrypi
   2022-1-19
+  
   -from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 from urllib.parse import urlencode, quote_plus, unquote
@@ -239,6 +240,7 @@ for item in data:
 	pm25value = item.find('pm10value')
 	print(datatime.get_text())
 	print(pm25value.get_text())
+	
   -에어코리아 주소
      - airkorea.or.kr
   - 공공데이터 포털 주소
