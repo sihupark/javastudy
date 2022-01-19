@@ -213,3 +213,34 @@
      - final 클래스: 상속할 수 없는 클래스
   - abstract
      - 추상클래스를 만들려면 abstract를 클래스 앞에 붙인다.
+#raspberrypi
+  2022-1-19
+  -from bs4 import BeautifulSoup
+from urllib.request import Request, urlopen
+from urllib.parse import urlencode, quote_plus, unquote
+import requests
+
+url = 'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty'
+queryParams = '?' + urlencode({quote_plus('serviceKey'): 'Gkhq+uo4qB8ETdZCYbYJHIswWquBvkKR0PKmUHppucbBJztsGx17tq9cx56sDqItq3Ltd8wlQay9PP6yoyUmDQ=='
+	,quote_plus('returnType'):'xml'
+	,quote_plus('numOfRows'):'10'
+	,quote_plus('pageNo'): '1'
+	,quote_plus('stationName'): '서창'
+	,quote_plus('dataTerm'): 'DAILY'
+	,quote_plus('ver'): '1.0'})
+	
+res = requests.get(url+queryParams)
+soup = BeautifulSoup(res.content, 'html.parser')
+data = soup.find_all('item')
+print(data)	
+
+for item in data:
+	datatime = item.find('datatime')
+	pm25value = item.find('pm10value')
+	print(datatime.get_text())
+	print(pm25value.get_text())
+  -에어코리아 주소
+     - airkorea.or.kr
+  - 공공데이터 포털 주소
+     - data.go.kr   
+     - 
