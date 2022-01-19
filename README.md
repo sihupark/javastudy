@@ -216,30 +216,30 @@
 #raspberrypi
   2022-1-19
   
-  -from bs4 import BeautifulSoup
-from urllib.request import Request, urlopen
-from urllib.parse import urlencode, quote_plus, unquote
-import requests
+  -from bs4 import BeautifulSoupㄸ
+from urllib.request import Request, urlopenㄸ
+from urllib.parse import urlencode, quote_plus, unquoteㄸ
+import requestsㄸ
 
-url = 'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty'
-queryParams = '?' + urlencode({quote_plus('serviceKey'): 'Gkhq+uo4qB8ETdZCYbYJHIswWquBvkKR0PKmUHppucbBJztsGx17tq9cx56sDqItq3Ltd8wlQay9PP6yoyUmDQ=='
-	,quote_plus('returnType'):'xml'
-	,quote_plus('numOfRows'):'10'
-	,quote_plus('pageNo'): '1'
-	,quote_plus('stationName'): '서창'
-	,quote_plus('dataTerm'): 'DAILY'
-	,quote_plus('ver'): '1.0'})
+url = 'http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty'ㄸ
+queryParams = '?' + urlencode({quote_plus('serviceKey'):ㄸ 'Gkhq+uo4qB8ETdZCYbYJHIswWquBvkKR0PKmUHppucbBJztsGx17tq9cx56sDqItq3Ltd8wlQay9PP6yoyUmDQ=='ㄸ
+	,quote_plus('returnType'):'xml'ㄸ
+	,quote_plus('numOfRows'):'10'ㄸ
+	,quote_plus('pageNo'): '1'ㄸ
+	,quote_plus('stationName'): '서창'ㄸ
+	,quote_plus('dataTerm'): 'DAILY'ㄸ
+	,quote_plus('ver'): '1.0'})ㄸ
 	
-res = requests.get(url+queryParams)
-soup = BeautifulSoup(res.content, 'html.parser')
-data = soup.find_all('item')
-print(data)	
+res = requests.get(url+queryParams)ㄸ
+soup = BeautifulSoup(res.content, 'html.parser')ㄸ
+data = soup.find_all('item')ㄸ
+print(data)ㄸ	
 
-for item in data:
-	datatime = item.find('datatime')
-	pm25value = item.find('pm10value')
-	print(datatime.get_text())
-	print(pm25value.get_text())
+for item in data:ㄸ
+	datatime = item.find('datatime')ㄸ
+	pm25value = item.find('pm10value')ㄸ
+	print(datatime.get_text())ㄸ
+	print(pm25value.get_text())ㄸ
 	
   -에어코리아 주소
      - airkorea.or.kr
